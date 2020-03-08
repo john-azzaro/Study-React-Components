@@ -1,0 +1,21 @@
+Process Notes for React JSX study
+=================================
+
+
+
+
+About Process Notes
+===================
+"Process Notes" is a step-by-step workflow document that outlines the "phases" of my study/app development and the successive steps taken at each
+milestone of the examination. In the case of studies, the process notes might be eschewed in favor of the main Readme document in the repository, 
+mostly because of the advantage in formatting and accessibility. However, I will put additional notes and resource links that might be helpful. In 
+the case of application development, groups of related steps are combined into "phase" modules so that they can be reorganized and refined in 
+post-review. This has proven to be EXTREMELY helpful in learning (i.e. Feynman technique (https://fs.blog/2012/04/feynman-technique/)) and refining 
+workflow so I can improve my process in future projects. It also has come in handy for some tricky bug fixes not only for past projects, but this 
+one as well so I would urge you to consider at least doing a rough summary for your own benefit.
+
+
+
+
+Resources
+==========
