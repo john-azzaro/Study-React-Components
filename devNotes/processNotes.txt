@@ -17,5 +17,27 @@ one as well so I would urge you to consider at least doing a rough summary for y
 
 
 
+On creating a split component:
+==============================
+* To make a layout making a left and right split...
+
+1. Create a new folder inside ./src called composition
+  ------------------------------
+      ./src/composition
+  ------------------------------
+2. Create a new file inside called Split.JS
+  -----------------------------
+    Split.js
+  -----------------------------
+
+
+
+
+
+
+
+
+
+
 Resources
 ==========
