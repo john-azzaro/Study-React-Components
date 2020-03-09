@@ -33,7 +33,12 @@ On creating a split component:
   -----------------------------------
     import React from 'react'
   -----------------------------------
-
+4. Create a function for the component:
+  ----------------------------------
+    function Split() {
+      //code goes here
+    }
+  ----------------------------------
 
 
 
