@@ -29,6 +29,10 @@ On creating a split component:
   -----------------------------
     Split.js
   -----------------------------
+3. Import React (so you can use JSX)
+  -----------------------------------
+    import React from 'react'
+  -----------------------------------
 
 
 
