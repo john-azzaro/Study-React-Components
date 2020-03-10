@@ -58,11 +58,29 @@ First, you need to make sure you import react so that you can use it inside your
 ## Create a function for your component.
 In this case, we're going to create a component that "splits" a screen in two, so we should name it something that is intuitive like "Split".
 ```JavaScript
+  import React from 'react';
+  
   function Split() {
     return (
       // code goes here.
     );
   }
+```
+
+<br>
+
+## Export the component for use in the app.
+To export the component, you just have to export as default and give the component a name that will be called.
+```JavaScript
+  import React from 'react';
+  
+  function Split() {
+    return (
+      // code goes here.
+    );
+  }
+
+  export default Split
 ```
 
 
