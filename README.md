@@ -89,7 +89,7 @@ To export the component, you just have to export as default and give the compone
 
 <br>
 
-## Import the component.
+## 6. Import the component.
 To use an external component, you need to import it from the composition file it is stored in. In this case, the composition file route is back in the src file (e.g ./) and then inside the composition file (e.g. ./composition/Split.js).
 ```JavaScript
   import React from 'react';
@@ -109,7 +109,7 @@ To use an external component, you need to import it from the composition file it
 
 <br>
 
-## Use the component in your file.
+## 7. Use the component in your file.
 After you have imported the component to your file, you can freely use it as many times as you wish in the file
 ```JavaScript
   import React from 'react';
