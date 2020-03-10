@@ -57,9 +57,28 @@ On creating a component:
   -----------------------------------
 
 6. Then import to App.
+  * Note: You'll get a error saying split is defined but never used.
+    This is fine since you will use it in the coming steps.
+  -----------------------------------------------
+    import Split from './composition/Split';
   -----------------------------------------------
 
-  -----------------------------------------------
+7. Add the Split component to your app!
+  ------------------------------------------------
+    import React from 'react';
+    import Split from './composition/Split';
+
+
+    function App() {
+      return (
+        <main className='App'>
+          <Split />                                     // Split component added to app
+        </main>
+      );
+    }
+
+    export default App;
+  ------------------------------------------------
 
 
 
