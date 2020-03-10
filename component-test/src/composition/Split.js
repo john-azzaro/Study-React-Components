@@ -7,3 +7,5 @@ function Split() {
     </div>
   );
 }
+
+export default Split;

@@ -17,29 +17,49 @@ one as well so I would urge you to consider at least doing a rough summary for y
 
 
 
-On creating a split component:
-==============================
+On creating a component:
+================================================================
 * To make a layout making a left and right split...
 
 1. Create a new folder inside ./src called composition
   ------------------------------
       ./src/composition
   ------------------------------
+
 2. Create a new file inside called Split.JS
   -----------------------------
     Split.js
   -----------------------------
+
 3. Import React (so you can use JSX)
   -----------------------------------
     import React from 'react'
   -----------------------------------
+
 4. Create a function for the component:
   ----------------------------------
-    function Split() {
-      //code goes here
+    function Split() {                                 // "Split" component
+      return (
+        This is the content of the split component.
+      )
     }
   ----------------------------------
 
+5. Export the component so it can be added to App.
+  -----------------------------------
+      function Split() {
+      return (
+        This is the content of the split component.
+      )
+    }
+
+    export default Split;                             // export
+  -----------------------------------
+
+6. Then import to App.
+  -----------------------------------------------
+
+  -----------------------------------------------
 
 
 
