@@ -60,9 +60,11 @@ In this case, we're going to create a component that "splits" a screen in two, s
 ```JavaScript
   import React from 'react';
   
-  function Split() {               // Split component.
+  function Split() {                                 // Split component.
     return (
-      // code goes here.
+      <div className='split'>
+        This is the content of the split component.
+      </div>
     );
   }
 ```
@@ -76,7 +78,9 @@ To export the component, you just have to export as default and give the compone
   
   function Split() {
     return (
-      // code goes here.
+      <div className='split'>
+        This is the content of the split component.
+      </div>
     );
   }
 
@@ -105,8 +109,23 @@ To use an external component, you need to import it from the composition file it
 
 <br>
 
+## Use the component in your file.
+After you have imported the component to your file, you can freely use it as many times as you wish in the file
+```JavaScript
+  import React from 'react';
+  import Split from './composition/Split';    
 
 
+  function App() {
+    return (
+      <main className='App'>
+        < Split />
+      </main>
+    );
+  }
+
+  export default App;
+```
 
 
 
