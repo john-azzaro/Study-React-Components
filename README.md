@@ -26,8 +26,13 @@ The advantage of using React components is that the are *reusable*. You can make
 <br>
 <br>
 
-# 
+# How do you create and use components?
 
+## Create a composition file.
+Assuming you have your React application setup and ready to go (e.g. create-react-app), the first thing you need to do is create "composition" file inside your source files folder. This file is going to house all of the components for the immediate study.
+```
+  src  >  composition  
+```
 <dl>
 <dd>
 
