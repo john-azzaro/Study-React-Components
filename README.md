@@ -43,7 +43,27 @@ Assuming you have your React application setup and ready to go (e.g. create-reac
 Once you have the composition folder setup, you can put all of your component files inside. For this study, we want to create a component that splits the screen in two called "Split." 
 ```
   src  >  composition  >  Split.js
-``
+```
+
+<br>
+
+## In your component file, import React.
+First, you need to make sure you import react so that you can use it inside your file.
+```JavaScript
+  import React from 'react';
+```
+
+<br>
+
+## Create a function for your component.
+In this case, we're going to create a component that "splits" a screen in two, so we should name it something that is intuitive like "Split".
+```JavaScript
+  function Split() {
+    return (
+      // code goes here.
+    );
+  }
+```
 
 
 

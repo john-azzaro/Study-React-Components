@@ -26,12 +26,12 @@ On creating a component:
       ./src/composition
   ------------------------------
 
-2. Create a new file inside called Split.JS
+2. Create a new file inside called Split.js
   -----------------------------
     Split.js
   -----------------------------
 
-3. Import React (so you can use JSX)
+3. Import React (so you can use JSX) in Split.js
   -----------------------------------
     import React from 'react'
   -----------------------------------
