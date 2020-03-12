@@ -51,9 +51,9 @@ Once you have the composition folder setup, you can put all of your component fi
 <br>
 
 ## 3. In your component file, import React.
-First, you need to make sure you import react so that you can use it inside your file. To do this, you simply need ot import React from the react dependency that which comes bundled with the ```create-react-app``` application installation.
+First, you need to make sure you import react so that you can use it inside your file. To do this, you simply need to import React from the react dependency that which comes bundled with the ```create-react-app``` application installation.
 ```JavaScript
-  import React from 'react';
+  import React from 'react';                         // Import React for use inside file.
 ```
 
 <br>
@@ -75,7 +75,7 @@ The function you create is going to be the custom component you want to exort el
 <br>
 
 ## 5. Export the component for use in the app.
-If you want to export your component for use elsewhere in your code, you need to export it. To export the component, you just have to export as default and give the component a name that will be called.
+If you want to export your component for use elsewhere in your code, you need to export it. React uses the "export" keyowrd to export a particular module, named parameter, etc. To export the default export from a file, you follow the following syntax:
 ```JavaScript
   import React from 'react';
   
@@ -93,7 +93,7 @@ If you want to export your component for use elsewhere in your code, you need to
 <br>
 
 ## 6. Import the component.
-To use an external component, you need to import it from the composition file it is stored in. In this case, the composition file route is back in the src file (e.g ./) and then inside the composition file (e.g. ./composition/Split.js).
+React uses the keywords ```import``` and ```from``` to import a particular module or named parameter. In this case, since we have a custom component named "Split" in the composition file, we can import the component "Split" from the composition file route back in the src file (e.g ./) and then inside the composition file (e.g. ./composition/Split.js).
 ```JavaScript
   import React from 'react';
   import Split from './composition/Split';    // import split from the composition file.
@@ -113,7 +113,7 @@ To use an external component, you need to import it from the composition file it
 <br>
 
 ## 7. Use the component in your file.
-After you have imported the component to your file, you can freely use it as many times as you wish in the file
+After you have imported the component to your file, you can freely use it as many times as you wish in the file by inserting the tag with the component name anywhere you wish. In this case, the "Split" component is being used in the main App component.
 ```JavaScript
   import React from 'react';
   import Split from './composition/Split';    

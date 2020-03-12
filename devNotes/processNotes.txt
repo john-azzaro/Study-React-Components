@@ -89,3 +89,4 @@ On creating a component:
 
 Resources
 ==========
+https://www.geeksforgeeks.org/reactjs-importing-exporting/    -- good elaboration on importation and exportation.
