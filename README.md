@@ -27,6 +27,14 @@ The advantage of using React components is that the are *reusable*. You can make
 <br>
 
 # How do you create and use components?
+To create and use basic components in your application, you simply need to follow the following process:
+1. [Create a composition file.](#Create-a-composition-file)
+2. [Create a component file in the composition folder.](#Create-a-component-file-in-the-composition-folder)
+3. [In your component file, import React.](#In-your-component-file-import-React)
+4. [Create a function for your component.](#Create-a-function-for-your-component)
+5. [Export the component for use in the app.](#Export-the-component-for-use-in-the-app)
+6. [Import the component.](#Import-the-component)
+7. [Use the component in your file.](#Use-the-component-in-your-file)
 
 <dl>
 <dd>
