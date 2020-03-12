@@ -28,13 +28,6 @@ The advantage of using React components is that the are *reusable*. You can make
 
 # How do you create and use components?
 To create and use basic components in your application, you simply need to follow the following process:
-1. [Create a composition file.](##Create-a-composition-file)
-2. [Create a component file in the composition folder.](##Create-a-component-file-in-the-composition-folder)
-3. [In your component file, import React.](##In-your-component-file-import-React)
-4. [Create a function for your component.](##Create-a-function-for-your-component)
-5. [Export the component for use in the app.](##Export-the-component-for-use-in-the-app)
-6. [Import the component.](##Import-the-component)
-7. [Use the component in your file.](##Use-the-component-in-your-file)
 
 <br>
 
@@ -50,7 +43,7 @@ Assuming you have your React application setup and ready to go (e.g. create-reac
 <br>
 
 ## 2. Create a component file in the composition folder.
-Once you have the composition folder setup, you can put all of your component files inside. For this study, we want to create a component that splits the screen in two called "Split." 
+Once you have the composition folder setup, you can put all of your component files inside. For this study, we want to create a component that splits the screen in two called "Split." Remember that in the case of custom components, you always want to capitalize the first letter by convention.
 ```
   src  >  composition  >  Split.js
 ```
@@ -58,7 +51,7 @@ Once you have the composition folder setup, you can put all of your component fi
 <br>
 
 ## 3. In your component file, import React.
-First, you need to make sure you import react so that you can use it inside your file.
+First, you need to make sure you import react so that you can use it inside your file. To do this, you simply need ot import React from the react dependency that which comes bundled with the ```create-react-app``` application installation.
 ```JavaScript
   import React from 'react';
 ```
@@ -66,7 +59,7 @@ First, you need to make sure you import react so that you can use it inside your
 <br>
 
 ## 4. Create a function for your component.
-In this case, we're going to create a component that "splits" a screen in two, so we should name it something that is intuitive like "Split".
+The function you create is going to be the custom component you want to exort elsewhere in your code.  In this case, we're going to create a component that "splits" a screen in two, so we should name it something that is intuitive like "Split". Again, remember that since this is a custom component, you want to capitalize the first letter.
 ```JavaScript
   import React from 'react';
   
@@ -82,7 +75,7 @@ In this case, we're going to create a component that "splits" a screen in two, s
 <br>
 
 ## 5. Export the component for use in the app.
-To export the component, you just have to export as default and give the component a name that will be called.
+If you want to export your component for use elsewhere in your code, you need to export it. To export the component, you just have to export as default and give the component a name that will be called.
 ```JavaScript
   import React from 'react';
   
