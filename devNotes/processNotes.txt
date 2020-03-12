@@ -18,7 +18,7 @@ one as well so I would urge you to consider at least doing a rough summary for y
 
 
 On creating a component:
-================================================================
+=====================================================================================
 * To make a layout making a left and right split...
 
 1. Create a new folder inside ./src called composition
@@ -79,6 +79,22 @@ On creating a component:
 
     export default App;
   ------------------------------------------------
+
+
+
+
+On component styling:
+===========================================================================================
+* To style the component you just created.
+
+1. Create file called App.css in the src folder:
+  ------------------------------------------------------------------
+    src  >  App.css
+  ------------------------------------------------------------------
+
+
+
+
 
 
 
