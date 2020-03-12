@@ -88,6 +88,9 @@ On component styling:
 * To style the component you just created.
 
 1. Create file called App.css in the src folder:
+* Webpack has enabled a feature to let you add CSS files specifically for each component you make. 
+  So in this case, you are making a style sheet specifically for the App component. This is neat because
+  it is a seperation of concerns that allows you to focus on one section of styling at a time.
   ------------------------------------------------------------------
     src  >  App.css
   ------------------------------------------------------------------

@@ -7,10 +7,13 @@ The React component Study is an examination of Components, functionality, and be
 
 Here are a few questions from the study to explore:
 
-* [](#)
+* [Why do you use components?](#Why-do-you-use-components)
+* [How do you create and use components?](#How-do-you-create-and-use-components)
+* [How do you style components?](#How-do-you-style-components)
 * [](#)
 * [](#)
 
+<br>
 <br>
 <br>
 
@@ -23,6 +26,7 @@ The advantage of using React components is that the are *reusable*. You can make
 </dd>
 </dl>
 
+<br>
 <br>
 <br>
 
@@ -130,11 +134,27 @@ After you have imported the component to your file, you can freely use it as man
   export default App;
 ```
 
+</dd>
+</dl>
 
+<br>
+<br>
+<br>
+
+# How do you style components?
+
+<br>
+
+<dl>
+<dd>
 
 
 
 
 </dd>
 </dl>
+
+<br>
+<br>
+<br>
 
