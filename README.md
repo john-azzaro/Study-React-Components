@@ -102,7 +102,7 @@ React uses the keywords ```import``` and ```from``` to import a particular modul
   function App() {
     return (
       <main className='App'>
-        // code here.
+        This is the content of the split component.
       </main>
     );
   }
@@ -113,7 +113,7 @@ React uses the keywords ```import``` and ```from``` to import a particular modul
 <br>
 
 ## 7. Use the component in your file.
-After you have imported the component to your file, you can freely use it as many times as you wish in the file by inserting the tag with the component name anywhere you wish. In this case, the "Split" component is being used in the main App component.
+After you have imported the component to your file, you can freely use it as many times as you wish in the file by inserting the tag with the component name anywhere you wish. In this case, the "Split" component is being used in the main App component. Note that you could add as many component tags as you wish because since components are reusable. So if you added 6 instances of ```< Split />```, you would have 6 elements of "This is the content of the split component."
 ```JavaScript
   import React from 'react';
   import Split from './composition/Split';    
