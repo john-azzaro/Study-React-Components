@@ -126,8 +126,36 @@ For Example in addition to the steps above.
     and save it in there. Then, in the Split.js file, import it via './Split.css'.
 
   4. Alter the App component to do a left and right split:
-     * For this, instead of simply importing the single component tag, you need to create
+     * For this, instead of simply importing the single component tag, you need to create tags and content for the left
+       and right to do the test.
+      --------------------------------------------------------------------------------------------------------
+        function App() {
+          return (
+            <main className='App'>
+              <Split>
+                This is the content for the left `Split`. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?
+              </Split>
+              <Split>
+                This is the content for the right `Split`. Inventore aliquid cupiditate suscipit repellat. Quaerat quis officiis quam fuga. Aliquid quo possimus id soluta aspernatur.
+              </Split>
+            </main>
+          );
+        }
+      --------------------------------------------------------------------------------------------------------
+      However, at this time you wont see the new content... for that you will need props.
 
+  5. Inside Split.js, pass in props and call props.children to get the content in App.js
+    * So again for the props, its a way of passing properties and data down from one component to another. In this case, we have text above that will 
+      be passed to the Split component via props and then when you call props.children, you will see the message.
+      ---------------------------------------------------------------------------------------------------
+          function Split(props) {                                 // pass the props object
+            return (
+              <div className='split'> 
+                {props.children}                                  // and call the props.children
+              </div>
+            );
+          }
+      ---------------------------------------------------------------------------------------------------
 
 
 

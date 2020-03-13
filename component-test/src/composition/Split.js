@@ -1,10 +1,10 @@
 import React from 'react';
 import './Split.css';
 
-function Split() {
+function Split(props) {
   return (
     <div className='split'>
-      This is the content of the split component.
+      {props.children}
     </div>
   );
 }
