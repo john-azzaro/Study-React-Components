@@ -198,9 +198,9 @@ For Example in addition to the steps above.
     * Inside the split component, add code to read the props and create a new combined variable called "combinedClassName".
     ------------------------------------------------------------------------------------------
         function Split(props) {
-          const combinedClassName = `split ${props.className}`;
+          const combinedClassName = `split ${props.className}`;                                  // Code that will read props and create new className.
           return (
-            <div className={combinedClassName}>
+            <div className={combinedClassName}>                                                  // and call the new combinedClassName.
               {props.children}
             </div>
           );
@@ -213,4 +213,7 @@ For Example in addition to the steps above.
 
 Resources
 ==========
+React Developer tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+* See the console components tab to see a list of all the components.
+
 https://www.geeksforgeeks.org/reactjs-importing-exporting/    -- good elaboration on importation and exportation.

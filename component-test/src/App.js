@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <main className='App'>
-      <Split className="left">
+      <Split className='left' flexBasis={2}>
         This is the content for the left `Split`. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?
       </Split>
       <Split className="right">
