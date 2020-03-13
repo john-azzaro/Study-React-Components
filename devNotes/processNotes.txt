@@ -105,9 +105,28 @@ On component styling:
   ------------------------------------------------------------------
 
 3. Import the CSS file to the App.js file:
+  * Webpack is going to add these styles to the browser when you import them to 
+    the JavaScript file.
   ------------------------------------------------------------------
-    
+    import './App.css';
   ------------------------------------------------------------------
+
+
+
+For Example in addition to the steps above.
+=================================================================================================
+-- As the objective is to do a split screen, we need to do the same thing with the Split.js 
+   file. So in src/composition, create a Split.css file with the following:
+    ---------------------------------------------------
+     .split {
+        flex: 1;
+        padding: 1em;
+      }
+    --------------------------------------------------- 
+    and save it in there. Then, in the Split.js file, import it via './Split.css'.
+
+  4. Alter the App component to do a left and right split:
+     * For this, instead of simply importing the single component tag, you need to create
 
 
 
