@@ -157,7 +157,40 @@ For Example in addition to the steps above.
           }
       ---------------------------------------------------------------------------------------------------
 
+  6. To style each Split component differently, add respective className's:
+    -------------------------------------------------------------------------------------------------
+        function App() {
+          return (
+            <main className='App'>
+              <Split className="left">                                                          // className for left column
+                This is the content for the left `Split`. Lorem ipsum...
+              </Split>
+              <Split className="right">
+                This is the content for the right `Split`. Inventore...                        // classname for right column
+              </Split>
+            </main>
+          );
+        }
+    -------------------------------------------------------------------------------------------------
 
+    7. To style the "left" and "right" className's, got o the App.css stylesheet
+    -----------------------------------------------
+        .App {
+          display: flex;
+          margin: 40px;
+          min-height: calc(100vh - 80px);
+        }
+
+        .left {                                         // stylization for left column
+          background-color: darkslategray;
+          color: azure;
+        }
+
+        .right {                                         // stylization for right column
+          background-color: wheat;
+          color: firebrick;
+        }
+    -----------------------------------------------
 
 
 
