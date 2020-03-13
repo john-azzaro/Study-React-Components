@@ -133,10 +133,10 @@ For Example in addition to the steps above.
           return (
             <main className='App'>
               <Split>
-                This is the content for the left `Split`. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?
+                This is the content for the left `Split`. Lorem ipsum...
               </Split>
               <Split>
-                This is the content for the right `Split`. Inventore aliquid cupiditate suscipit repellat. Quaerat quis officiis quam fuga. Aliquid quo possimus id soluta aspernatur.
+                This is the content for the right `Split`. Inventore a....
               </Split>
             </main>
           );
@@ -147,7 +147,7 @@ For Example in addition to the steps above.
   5. Inside Split.js, pass in props and call props.children to get the content in App.js
     * So again for the props, its a way of passing properties and data down from one component to another. In this case, we have text above that will 
       be passed to the Split component via props and then when you call props.children, you will see the message.
-      ---------------------------------------------------------------------------------------------------
+      --------------------------------------------------------
           function Split(props) {                                 // pass the props object
             return (
               <div className='split'> 
@@ -155,10 +155,10 @@ For Example in addition to the steps above.
               </div>
             );
           }
-      ---------------------------------------------------------------------------------------------------
+      ---------------------------------------------------------
 
   6. To style each Split component differently, add respective className's:
-    -------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------
         function App() {
           return (
             <main className='App'>
@@ -171,7 +171,7 @@ For Example in addition to the steps above.
             </main>
           );
         }
-    -------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------
 
     7. To style the "left" and "right" className's, got o the App.css stylesheet
     -----------------------------------------------
@@ -192,7 +192,20 @@ For Example in addition to the steps above.
         }
     -----------------------------------------------
 
+--- However, nothing will change because the Split component NEEDS TO BE MADE CONFIGURABLE.
 
+  8. Make the Split component Configurable.
+    * Inside the split component, add code to read the props and create a new combined variable called "combinedClassName".
+    ------------------------------------------------------------------------------------------
+        function Split(props) {
+          const combinedClassName = `split ${props.className}`;
+          return (
+            <div className={combinedClassName}>
+              {props.children}
+            </div>
+          );
+        }
+    ------------------------------------------------------------------------------------------
 
 
 
