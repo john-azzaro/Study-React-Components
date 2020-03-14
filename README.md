@@ -89,7 +89,7 @@ If you want to export your component for use elsewhere in your code, you need to
     );
   }
 
-  export default Split              // export the Split component elsewhere in the code.
+  export default Split                               // export the Split component elsewhere in the code.
 ```
 
 <br>
@@ -98,7 +98,7 @@ If you want to export your component for use elsewhere in your code, you need to
 React uses the keywords ```import``` and ```from``` to import a particular module or named parameter. In this case, since we have a custom component named "Split" in the composition file, we can import the component "Split" from the composition file route back in the src file (e.g ./) and then inside the composition file (e.g. ./composition/Split.js).
 ```JavaScript
   import React from 'react';
-  import Split from './composition/Split';    // import split from the composition file.
+  import Split from './composition/Split';           // import split from the composition file.
 
 
   function App() {
@@ -124,7 +124,7 @@ After you have imported the component to your file, you can freely use it as man
   function App() {
     return (
       <main className='App'>
-        < Split />
+        < Split />                                     // "Split" component.
       </main>
     );
   }
@@ -141,12 +141,10 @@ After you have imported the component to your file, you can freely use it as man
 
 # How do you style components?
 
-<br>
-
 <dl>
 <dd>
 
-## Create a .css file in the src folder.
+## 1. Create a .css file in the src folder.
 When you use ```create-react-app``` when you setup your project, you have webpack enabled. Webpack lets you add CSS files specifically 
 for each component you make. In this example, we are making a style sheet specifically for the App component. This is good because it 
 is a seperation of concerns that allows you to focus on one section of styling at a time.
@@ -156,7 +154,7 @@ is a seperation of concerns that allows you to focus on one section of styling a
 
 <br>
 
-## Inside the new .css file, create your styling.
+## 2. Inside the new .css file, create your styling.
 This stylization file is exactly the same as any normal css file. 
 ```css
   .App {                             
@@ -168,37 +166,93 @@ This stylization file is exactly the same as any normal css file.
 
 <br>
 
-## Import the .css file to the .js file you want to use it in.
+## 3. Import the .css file to the .js file you want to use it in.
 Tp use the CSS stylization in your component file, you need to import it from its location in the directory. In this case, the 
 App.css file is in the same folder (i.e. ./).Remember that webpack is going to add the styles to the browser when you import it 
 to the JavaScript file.
-```
+```javascript
   import './App.css';
 ```
 
+</dd>
+</dl>
+
+<br>
+<br>
 <br>
 
-## Add the respective className to elements in the components.
-In this example, the Split components have been expanded from a single tag to tags that have ocntent nested inside of them. You can
-insert the classNames inside these component tags.
-```JavaScript
-  function App() {
-  return (
-    <main className='App'>
-      <Split className='left'>            // class name = left.
-        Content for left panel.
-      </Split>
-      <Split className="right">           // class name = right.
-        Content for right panel/
-      </Split>
-    </main>
-  );
-}
+# How do you style components with props.
+
+<dl>
+<dd>
+
+## 1. Create a .css file for the component stylization.
+The first step in styling components (with props) is to create the stylesheet.
+```css
+  .split {
+    flex: 1;
+    padding: 1em;
+  }
 ```
 
 <br>
 
-## 
+## 2. Add classNames to respective components.
+In this example, the Split components have been expanded from a single tag to tags that have content nested inside of them. You can
+insert the classNames inside these component tags.
+```JavaScript
+  function App() {
+    return (
+      <main className='App'>
+        <Split className='left'>            // class name = left.
+          Content for left panel.
+        </Split>
+        <Split className="right">           // class name = right.
+          Content for right panel.
+        </Split>
+      </main>
+    );
+  }
+```
+
+
+
+<br>
+
+## Setup the 
+
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+  5. Inside Split.js, pass in props and call props.children to get the content in App.js
+    * So again for the props, its a way of passing properties and data down from one component to another. In this case, we have text above that will 
+      be passed to the Split component via props and then when you call props.children, you will see the message.
+      --------------------------------------------------------
+          function Split(props) {                                 // pass the props object
+            return (
+              <div className='split'> 
+                {props.children}                                  // and call the props.children
+              </div>
+            );
+          }
+      ---------------------------------------------------------
 
 
 
