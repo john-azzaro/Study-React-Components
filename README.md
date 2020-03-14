@@ -157,8 +157,7 @@ is a seperation of concerns that allows you to focus on one section of styling a
 <br>
 
 ## Inside the new .css file, create your styling.
-This stylization file is exactly the same as any normal css file. Naming wise, you should name the file after the primary component and 
-capitalize the name if it is a custom component.
+This stylization file is exactly the same as any normal css file.
 ```css
   .App {
     display: flex;
@@ -173,6 +172,24 @@ capitalize the name if it is a custom component.
 Remember that webpack is going to add the styles to the browser when you import it to the JavaScript file.
 ```
   import './App.css';
+```
+
+<br>
+
+## Add the respective className to elements in the components.
+```JavaScript
+  function App() {
+  return (
+    <main className='App'>
+      <Split className='left'>       // class name = left.
+        Content for left panel.
+      </Split>
+      <Split className="right">      // class name = right.
+        Content
+      </Split>
+    </main>
+  );
+}
 ```
 
 
