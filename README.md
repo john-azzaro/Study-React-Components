@@ -146,6 +146,18 @@ After you have imported the component to your file, you can freely use it as man
 <dl>
 <dd>
 
+## Create a .css file in the src folder.
+When you use ```create-react-app``` when you setup your project, you have webpack enabled. Webpack lets you add CSS files specifically 
+for each component you make. In this example, we are making a style sheet specifically for the App component. This is good because it 
+is a seperation of concerns that allows you to focus on one section of styling at a time.
+```
+  src  >  App.css
+```
+
+<br>
+
+## 
+
 
 
 
