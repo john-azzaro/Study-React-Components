@@ -157,9 +157,9 @@ is a seperation of concerns that allows you to focus on one section of styling a
 <br>
 
 ## Inside the new .css file, create your styling.
-This stylization file is exactly the same as any normal css file.
+This stylization file is exactly the same as any normal css file. 
 ```css
-  .App {
+  .App {                             
     display: flex;
     margin: 40px;
     min-height: calc(100vh - 80px);
@@ -169,7 +169,9 @@ This stylization file is exactly the same as any normal css file.
 <br>
 
 ## Import the .css file to the .js file you want to use it in.
-Remember that webpack is going to add the styles to the browser when you import it to the JavaScript file.
+Tp use the CSS stylization in your component file, you need to import it from its location in the directory. In this case, the 
+App.css file is in the same folder (i.e. ./).Remember that webpack is going to add the styles to the browser when you import it 
+to the JavaScript file.
 ```
   import './App.css';
 ```
@@ -183,16 +185,20 @@ insert the classNames inside these component tags.
   function App() {
   return (
     <main className='App'>
-      <Split className='left'>       // class name = left.
+      <Split className='left'>            // class name = left.
         Content for left panel.
       </Split>
-      <Split className="right">      // class name = right.
+      <Split className="right">           // class name = right.
         Content for right panel/
       </Split>
     </main>
   );
 }
 ```
+
+<br>
+
+## 
 
 
 
