@@ -215,12 +215,21 @@ insert the classNames inside these component tags.
   }
 ```
 
-
-
 <br>
 
-## Setup the 
-
+## 3. Setup the component for props.
+In this step, you want to enable the "Split" component to show the content inside you other component (in this case App.js the the string 
+"Content for left panel" and "Content for right panel". Those strings will be passed to the Split component via props and then when you 
+call props.children, you will see the message.
+```JavaScript
+  function Split(props) {                                 // pass the props object
+    return (
+      <div className='split'> 
+        {props.children}                                  // and call the props.children
+      </div>
+    );
+  }
+```
 
 
 
@@ -238,21 +247,6 @@ insert the classNames inside these component tags.
 
 
 
-
-
-
-  5. Inside Split.js, pass in props and call props.children to get the content in App.js
-    * So again for the props, its a way of passing properties and data down from one component to another. In this case, we have text above that will 
-      be passed to the Split component via props and then when you call props.children, you will see the message.
-      --------------------------------------------------------
-          function Split(props) {                                 // pass the props object
-            return (
-              <div className='split'> 
-                {props.children}                                  // and call the props.children
-              </div>
-            );
-          }
-      ---------------------------------------------------------
 
 
 
