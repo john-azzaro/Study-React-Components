@@ -156,7 +156,18 @@ is a seperation of concerns that allows you to focus on one section of styling a
 
 <br>
 
-## 
+## Inside the new .css file, create your styling.
+This stylization file is exactly the same as any normal css file. Naming wise, you should name the file after the primary component and 
+capitalize the name if it is a custom component.
+```css
+  .App {
+    display: flex;
+    margin: 40px;
+    min-height: calc(100vh - 80px);
+  }
+```
+
+<br>
 
 
 
