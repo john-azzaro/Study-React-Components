@@ -177,6 +177,8 @@ Remember that webpack is going to add the styles to the browser when you import 
 <br>
 
 ## Add the respective className to elements in the components.
+In this example, the Split components have been expanded from a single tag to tags that have ocntent nested inside of them. You can
+insert the classNames inside these component tags.
 ```JavaScript
   function App() {
   return (
@@ -185,7 +187,7 @@ Remember that webpack is going to add the styles to the browser when you import 
         Content for left panel.
       </Split>
       <Split className="right">      // class name = right.
-        Content
+        Content for right panel/
       </Split>
     </main>
   );
