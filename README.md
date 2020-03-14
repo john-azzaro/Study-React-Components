@@ -260,9 +260,9 @@ call props.children, you will see the message.
 Inside the split component you add code to read the props and create a new combined variable called "combinedClassName".
 ```JavaScript
   function Split(props) {
-    const combinedClassName = `split ${props.className}`;      // Code that will read props and create new className.
+    const combinedClassName = `split ${props.className}`;      // Code reads props and create new className.
     return (
-      <div className={combinedClassName}>                      // and call the new combinedClassName.
+      <div className={combinedClassName}>                      // ... and call the new combinedClassName.
         {props.children}
       </div>
     );
