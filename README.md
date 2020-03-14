@@ -169,6 +169,11 @@ capitalize the name if it is a custom component.
 
 <br>
 
+## Import the .css file to the .js file you want to use it in.
+Remember that webpack is going to add the styles to the browser when you import it to the JavaScript file.
+```
+  import './App.css';
+```
 
 
 
