@@ -227,12 +227,12 @@ and then import that stylesheet to the document you are using.
       min-height: calc(100vh - 80px);
     }
 
-    .left {                                     // stylization for left column
+    .left {                                     // stylization for left column.
       background-color: darkslategray;
       color: azure;
     }
 
-    .right {                                    // stylization for right column
+    .right {                                    // stylization for right column.
       background-color: wheat;
       color: firebrick;
     }
@@ -245,10 +245,10 @@ In this step, you want to enable the "Split" component to show the content insid
 "Content for left panel" and "Content for right panel". Those strings will be passed to the Split component via props and then when you 
 call props.children, you will see the message.
 ```JavaScript
-  function Split(props) {                                 // pass the props object
+  function Split(props) {                                 // pass the props object.
     return (
       <div className='split'> 
-        {props.children}                                  // and call the props.children
+        {props.children}                                  // and call the props.children.
       </div>
     );
   }
@@ -256,11 +256,18 @@ call props.children, you will see the message.
 
 <br>
 
-## 4. Add the 
-
-
-
-
+## 4. Make the component configurable.
+Inside the split component you add code to read the props and create a new combined variable called "combinedClassName".
+```JavaScript
+  function Split(props) {
+    const combinedClassName = `split ${props.className}`;      // Code that will read props and create new className.
+    return (
+      <div className={combinedClassName}>                      // and call the new combinedClassName.
+        {props.children}
+      </div>
+    );
+  }
+```
 
 </dd>
 </dl>
