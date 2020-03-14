@@ -33,8 +33,6 @@ The advantage of using React components is that the are *reusable*. You can make
 # How do you create and use components?
 To create and use basic components in your application, you simply need to follow the following process:
 
-<br>
-
 <dl>
 <dd>
 
