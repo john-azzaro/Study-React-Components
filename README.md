@@ -204,10 +204,10 @@ insert the classNames inside these component tags.
   function App() {
     return (
       <main className='App'>
-        <Split className='left'>            // class name = left.
+        <Split className='left'>                // class name = left.
           Content for left panel.
         </Split>
-        <Split className="right">           // class name = right.
+        <Split className="right">               // class name = right.
           Content for right panel.
         </Split>
       </main>
@@ -217,7 +217,30 @@ insert the classNames inside these component tags.
 
 <br>
 
-## 3. Setup the component for props.
+## 3. Add the stylizations to your .css file.
+For this step, you can either include your stylizations in a condensed stylesheet (i.e. App.css) or you can create a seperate stylesheet
+and then import that stylesheet to the document you are using.
+```css
+    .App {
+      display: flex;
+      margin: 40px;
+      min-height: calc(100vh - 80px);
+    }
+
+    .left {                                     // stylization for left column
+      background-color: darkslategray;
+      color: azure;
+    }
+
+    .right {                                    // stylization for right column
+      background-color: wheat;
+      color: firebrick;
+    }
+```
+
+<br>
+
+## 4. Setup the component for props.
 In this step, you want to enable the "Split" component to show the content inside you other component (in this case App.js the the string 
 "Content for left panel" and "Content for right panel". Those strings will be passed to the Split component via props and then when you 
 call props.children, you will see the message.
@@ -231,7 +254,9 @@ call props.children, you will see the message.
   }
 ```
 
+<br>
 
+## 4. Add the 
 
 
 
