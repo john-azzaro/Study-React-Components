@@ -219,6 +219,20 @@ Making a tooltip component
     src  >   composition  >  Tooltip.js
   -------------------------------------------------------------------------------------
 
+2. Create your Tooltip component:
+  ------------------------------------------------------------------------------------
+      import React from 'react';
+
+      function Tooltip(props) {
+        return (
+          <span className="Tooltip"></span>
+        );
+      }
+
+      export default Tooltip;
+  ------------------------------------------------------------------------------------
+
+  3. 
 
 
 
