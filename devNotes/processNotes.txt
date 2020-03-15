@@ -211,6 +211,21 @@ For Example in addition to the steps above.
 
 
 
+
+Making a tooltip component
+=================================================================
+1. In src/composition, create a file called Tooltip.js.
+  -------------------------------------------------------------------------------------
+    src  >   composition  >  Tooltip.js
+  -------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 Resources
 ==========
 React Developer tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
