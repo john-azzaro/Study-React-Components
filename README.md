@@ -139,7 +139,7 @@ After you have imported the component to your file, you can freely use it as man
 <br>
 <br>
 
-# How do you style components?
+# How do coordinate CSS styles with components?
 
 <dl>
 <dd>
@@ -181,7 +181,9 @@ to the JavaScript file.
 <br>
 <br>
 
-# How do you style components with props.
+# How do make components configurable.
+When You make a component configurable, you increase its potential for reuse by mixing both custom and standard props. In the example below, 
+we pass props as a parameter and access the passed children from the props object to make the Split component versatile for any application. 
 
 <dl>
 <dd>
