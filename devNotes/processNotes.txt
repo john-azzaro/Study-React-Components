@@ -327,7 +327,7 @@ Making a tooltip component
 
 
   6. Import Tooltip into App.js to see how it looks.
-    * There are two ways to import the tooltip component into the app. 
+    * There are two ways to import the tooltip component into the app and show just how felxible JSX can be. 
       1. The first way is to creater a const variable that contains the component you want to use. You then
          use it inside the app inside brackets. This is a preferable way since it will not clutter up the app component.      
       2. The second way is to create the tooltip component inside the app component.
