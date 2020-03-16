@@ -263,7 +263,7 @@ Making a tooltip component
         color: #01A800;
       }
 
-      .Tooltip-message {
+      .Tooltip-message {                                                 // message will have white text on dark background and appear above the text.
         background-color: hsla(0, 0%, 10%, 0.9);
         border-radius: 3px;
         color: #fff;
@@ -277,11 +277,41 @@ Making a tooltip component
         top: calc(-1.2em - 14px);
         white-space: nowrap;
       }
+ 
+      .Tooltip-message:after {                                            // speech bubble look with a triangle under it.
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+        content: " ";
+        font-size: 0;
+        left: 6vw;
+        line-height: 0;
+        margin-left: -5px;
+        position: absolute;
+        top: calc(18px + 14px);
+        width: 0;
+      }
     -----------------------------------------------------------------------------------
 
   5. Import the tooltip.css file to yourr Tooltip.js file to use.
     -----------------------------------------------------------------------------------
+        import React from 'react';
+        import './Tooltip.css';                                                           // import Tooltip.css to the Tooltip.js file.
 
+        function Tooltip(props) {
+          return (
+            <span className="Tooltip">
+              <span className="Tooltip-content">
+                {props.children}
+              </span>
+              <div className="Tooltip-message">
+                {props.children}
+              </div>
+            </span>
+          );
+        }
+
+        export default Tooltip;
     -----------------------------------------------------------------------------------
 
 
