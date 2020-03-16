@@ -6,9 +6,9 @@ function Tooltip(props) {
       <span className="Tooltip-content">
         {props.children}
       </span>
-      <span className="Tooltip-message">
+      <div className="Tooltip-message">
         {props.children}
-      </span>
+      </div>
     </span>
   );
 }
