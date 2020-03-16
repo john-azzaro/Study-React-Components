@@ -223,7 +223,7 @@ Making a tooltip component
   ------------------------------------------------------------------------------------
       import React from 'react';
 
-      function Tooltip(props) {
+      function Tooltip(props) {                                                         // Tooltip components with props passed in
         return (
           <span className="Tooltip"></span>
         );
@@ -232,7 +232,25 @@ Making a tooltip component
       export default Tooltip;
   ------------------------------------------------------------------------------------
 
-  3. 
+  3. Create sections for your tooltips components:
+    -----------------------------------------------------------------------------------
+      import React from 'react';
+
+      function Tooltip(props) {
+        return (
+          <span className="Tooltip">                                                     // span section for content of tooltip
+            <span className="Tooltip-content">
+              {props.children}
+            </span>
+            <div className="Tooltip-message">                                             // div with message section for message when highlighted.
+              {props.children}
+            </div>
+          </span>
+        );
+      }
+
+      export default Tooltip;
+    -----------------------------------------------------------------------------------
 
 
 

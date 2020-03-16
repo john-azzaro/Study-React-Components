@@ -1,0 +1,8 @@
+.Tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.Tooltip-content {
+  color: #01A800;
+}
