@@ -325,20 +325,24 @@ Making a tooltip component
         export default Tooltip;
     -----------------------------------------------------------------------------------
 
+
   6. Import Tooltip into App.js to see how it looks.
+    * There are two ways to import the tooltip component into the app. 
+      1. The first way is to creater a const variable that contains the component you want to use. You then
+         use it inside the app inside brackets. This is a preferable way since it will not clutter up the app component.      
+      2. The second way is to create the tooltip component inside the app component.
     ------------------------------------------------------------------------------------
       import React from 'react';
       import Split from './composition/Split';
       import './App.css';
       import Tooltip from './composition/Tooltip';
 
-      // make 2 tooltips here and another inside the App directly
-      const firstTooltip = (
+      const firstTooltip = (                                                                    // tooltip created outside app and then used inside app.
         <Tooltip message='tooltip message'>
         ipsum
         </Tooltip>
       )
-      const secondTooltip = (
+      const secondTooltip = (                                                                  // another tooltip created outside app and then used inside it.
         <Tooltip message='another tooltip message'>
           officiis
         </Tooltip>
@@ -348,15 +352,15 @@ Making a tooltip component
         return (
           <main className='App'>
             <Split className='left' flexBasis='2'>
-              This is the content for the left Split. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. 
+              This is the content for the left Split. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit.        // first tooltip
               Incidunt ex velit suscipit facere officia?<br />
-              Tooltip message='one more tooltip message'>
+              <Tooltip message='one more tooltip message'>                                                                      // second tooltip (tooltip created inside app.)
                 Necessitatibus?
               </Tooltip>
             </Split>
             <Split className='right'>
               This is the content for the right Split. Inventore aliquid cupiditate suscipit repellat. 
-              Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.
+              Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.                                 // third tooltip
             </Split>
           </main>
         )

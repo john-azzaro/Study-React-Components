@@ -36,14 +36,12 @@
   width: 0;
 }
 
-/* start hidden */
 .Tooltip-message {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-/* show on hover */
 .Tooltip:hover > .Tooltip-message {
   opacity: 1;
   visibility: visible;
