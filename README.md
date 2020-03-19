@@ -258,7 +258,7 @@ The advantage of using React components is that the are *reusable*. You can make
 <dd>
 
 ## Create a composition file to store custom components.
-Assuming you have your React application setup and ready to go (e.g. create-react-app), the first thing you need to do is create "composition" file inside your source files folder. This file is going to house all of the components for the immediate study.
+**When you create a composition file, you create a holder for custom components.** Assuming you have your React application setup and ready to go (e.g. create-react-app), the first thing you need to do is create "composition" file inside your source files folder. This file is going to house all of the components for the immediate study.
 ```
   src  >  composition  
 ```
@@ -266,20 +266,25 @@ Assuming you have your React application setup and ready to go (e.g. create-reac
 <br>
 
 ## Create a custom component file
-Now that you have a composition file, you can create as many custom compents as you want and store them (and associaetd css files) for use in your application. Remember that when you do custom components, by convention you should always capitalize the first letter in the name.
+**To create a custom component, simply create a .js file and name it with a capital letter.** Now that you have a composition file, you can create as many custom compents as you want and store them (and associaetd css files) for use in your application. Remember that when you do custom components, by convention you should always capitalize the first letter in the name.
 ```
   src  >  composition  >  MyComponent.js
 ```
 <br>
 
 ## Setup your custom component.
-The setup for a custom component will usually have a few standard elements. First, you need to import React so you can utilize it in your file. Second, you need to create your custom component. You component can be constructed in a few ways, such as a *function component* or a *class component*. For this example, we'll use a function component but see some of the following questions in this readme for class component composition. And lastly, you need to export your component for use elsewhere in the application.
+**The setup for a custom component will usually have a few standard elements.** First, you need to import React so you can utilize it in your file. Second, you need to create your custom component. You component can be constructed in a few ways, such as a *function component* or a *class component*. For this example, we'll use a function component but see some of the following questions in this readme for class component composition. Note here that we have the "props" object passed in and ```{props.children}``` to get the child text. 
+
+
+And lastly, you need to export your component for use elsewhere in the application.
 ```JavaScript
   import React from 'react';                // Import react
 
   function MyComponent(props) {             // Custom component (with props passed in).
     return (
-      This is a test.
+      <div>
+        {props.children}                    // and access the children via props.children.
+      </div>
     );
   }
 
@@ -289,6 +294,19 @@ The setup for a custom component will usually have a few standard elements. Firs
 <br>
 
 ## Import and use you custom component.
+**To import a custom component, you need to import the file and then use the component name you exported.**
+
+```JavaScript
+  import React from 'react';
+
+  function App() {
+    return (
+
+    );
+  }
+
+  export default App;
+```
 
 
 
