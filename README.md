@@ -7,11 +7,69 @@ The React component Study is an examination of Components, functionality, and be
 
 Here are a few questions from the study to explore:
 
+* [What is a component?](#What-is-a-component)
 * [Why do you use components?](#Why-do-you-use-components)
 * [How do you create and use components?](#How-do-you-create-and-use-components)
 * [How do you style components?](#How-do-you-style-components)
 * [](#)
 * [](#)
+* [](#)
+
+<br>
+<br>
+<br>
+
+# What is a component?
+
+<dl>
+<dd>
+
+## Components are resuable pieces of code to create elements.
+**Components are the building blocks of a React app.** In a more technical sense, a component is a JavaScript class or function that accepts inputs like props and returns a React element that describes how the section's UI will appear. At its core, components can help organize complex applications by making small, reusable pieces of code. Below is an example of the simple "component".
+```JavaScript
+      const myGreeting = <div>                                             
+                            <h1>This is my Greeting</h1>                     
+                            <p>Salutations from myself to yourself</p>
+                         </div>
+```
+
+<br>
+
+## A component can be written as a function.
+When you write the component as a function, you simply return the component inside parentheses ( () ). **Note here that custom components should be upper case**
+```JavaScript
+      function Greeting() {
+        return (
+          <div>                                             
+              <h1>This is my Greeting</h1>                     
+              <p>Salutations from myself to yourself</p>
+          </div>
+        );
+      };
+```
+
+<br>
+
+## To use functional components, you can use tags or createElement.
+**The first method is using tags (e.g. ```<myComponent> <myComponent />```).** Tags can be used because a React component that only accepts one element and all the rest/siblings must be nested within the one parent element.
+
+**The second method is to use the full tags as an element (e.g. ```<myComponent><myComponent/>``` ).** This will come in handy when you start nested elements later on.
+
+**The third method is to use the ```React.createElement(myComponent)``` method.** When you use this method, you simply pass in the component name (i.e. Greeting).
+```JavaScript
+  // Method 1: Tags:
+  ReactDOM.render(< Greeting />, appRoot);
+  
+  // Method 2: Full tag element:
+  ReactDOM.render(<Greeting><Greeting/>, appRoot);
+
+  // Method 3: createElement method:
+  ReactDOM.render(React.createElement(Greeting), appRoot);
+
+```
+
+</dd>
+</dl>
 
 <br>
 <br>
