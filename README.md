@@ -88,6 +88,206 @@ The advantage of using React components is that the are *reusable*. You can make
 <br>
 <br>
 
+# What is a prop?
+
+<dl>
+<dd>
+
+## Props make components easily and dynamically customizable.
+ **Props are the inputs (i.e. arguments) to a React component and are similar to HTML element attributes.** Props provide a way of pasing properites and data down from one component to another, typically from parent to a child component (unidirectional dataflow). In many ways, you can consider props the same as arguments to a function.  However, note that props are *read-only* and components should *never* modify props passed into it. So when a component is passed a prop as an input, it should always return the same result for the input.
+
+<br>
+
+## To use props in a component, use curly braces.
+Inside the curly braces, you can insert JavaScript, such as variables, etc. You can also use backticks inside the curly braces as well.
+```JavaScript
+      const googleAddress = "https://google.com";
+      const target = "_blank";
+
+      const googleHome = (
+        <a href={googleAddress} target={target}>        // curly braces for variables.
+          {`Google Homepage`}                           // curly braces with backticks.
+        </a>
+      );
+
+      ReactDOM.render(googleHome, appRoot);
+```
+
+<br>
+
+## You can add id's and class attributes to output HTML.
+**You can add id's and classes which are rendered into the DOM by using props.** Notice that these look very much similar to DOM attributes. However, keep in mind that there are some subtle differences in prop attributes. For example, although the "id" is the same as it is in HTML,the the prop for "class" is called "className".
+
+```JavaScript
+      function Greeting() {
+        return (
+          <span id='greet-id' className='greet-class'>Hello world</span>    // id and classname.
+        );
+      }
+
+      ReactDOM.render(< Greeting />, appRoot);
+```
+
+<br>
+
+## Props are function arguments.
+**Props are passed to components much like the way arguments are passed into a function.** If you were to pass in a the parameter "args" and insert a console.log(args), you will get an empty object ( {} ). This object is the component's props (which we called "args") and contains the key/value pairs corresponding to the props that were passed in.
+
+In the example below, when you render Greeting, you can also (in the same tag) pass in any arguments you want. In this case, there are no argument. However, if you console log the args you passed in (which are still nothing in this case), you will get an *empty object*. This object is what will store all the arguments you pass in to the component for you to use internally. 
+```JavaScript
+      const appRoot = document.querySelector("#application-root");
+
+      function Greeting(args) {                                                              // 2. Arguments passed in as "args".
+        console.log(args)                                                                    // 3. {}
+        return <span id="greeting-id" className="greeting-class">My Greeting</span>;    
+      }
+
+      ReactDOM.render(<Greeting />, appRoot);                                                // 1. Greeting instance with NO arguments.
+```
+
+<br>
+
+## Pass props like arguments.
+**To pass props to components, you simply pass the arguments to the empty "props" object.** Suppose you want to pass attributes from OUTSIDE the component. In the example below, when we render Greeting with ```ReactDOM.render()``` and pass in ```className="new-class-name"```, we are essentially populating the blank object in the form of key/value pairs, which in this case would be ```className: new-class-name```. 
+
+And because you pass the props like arguments, you pass ```props``` as a parameter to Greeting and then access the key/value pair for className using dot-notation. In this case, we use the curly braces and ```props.className```.
+```JavaScript
+      const appRoot = document.querySelector("#application-root");                     
+
+      function Greeting(props) {                                                             // 2. arguments passed in as "props". 
+        return <span id="greeting-id" className={props.className}>My Greeting</span>;        // 3. className accesed with props.className.
+      }
+
+      ReactDOM.render(<Greeting className="new-class-name"/>, appRoot);                      // 1. Greeting instance with className argument.
+```
+
+<br>
+
+## You can pass multiple types of data to the component.
+**The types of data you can pass include strings, booleans, numbers, objects, arrays, etc.** You can do all of that when you render the instance of your component. **Also notice that except for the strings, all the values of the data types are in curly braces ({}).**
+```JavaScript
+      ReactDOM.render(
+        <Greeting 
+          className="new-class-name"           // class
+          foo='bar'                            // string
+          boolProp={false}                     // booleans
+          numberProp={123}                     // integers
+          objectProp={{ baz: 'buzz' }}         // objects
+          objectProp={ bar }                   // object via const obj = {foo: 'bar'}
+          functionProp={func}                  // function via const func = function(){...}
+          arrayProp={[ '3', '2', '1' ]}        // array
+        />, appRoot);
+```
+
+<br>
+
+## Nesting Elements will create a prop called "children".
+**When you nest other elements inside your rendered component, React will create a special object called "children".** For example, if you want to nest an ```<h1>``` element inside ```<header>```, those nested elements are stored and accessed via the "children" property. The children prop to pass nested element much like an argument to a function which React then renders to the page.
+
+
+
+ In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
+
+<dl>
+<dd>
+
+<br>
+
+### WITHOUT nested elements, React will not provide the "children" object.
+-------------
+**Withough nested elements, the component will not have the children object.** In the example below, we have a basic render of the Greeting component WITHOUT any nested elements. Note that in the console, the component does NOT have a children property.
+```JavaScript
+      function Greeting(props) {
+        console.log(props)
+        return (
+          <header>
+            Salutations!                       // OUTPUT: Salutations!
+          </header>
+        );
+      }
+
+      ReactDOM.render(
+        <Greeting className="my-class">        // Note that there are NO nested elements.
+        </Greeting>, appRoot);
+```
+```
+  ==========CONSOLE==========
+
+  {className: "my-class"}
+    className: "my-class"
+    __proto__: Object
+```
+
+<br>
+
+### WITH nested elements, React WILL provide the "children" object.
+--------------
+**React creates the "children" prop automatically and assigns its value whatever was between the open and closing of the component tags.** The children prop is enabling the h1 element to be specified *outside* the Greeting component at the exact point where we placed it.
+
+```JavaScript
+      function Greeting(props) {
+        console.log(props)
+        return (
+          <header>
+            {props.children}                   // OUTPUT: Warm Welcome!
+          </header>
+        );
+      }
+
+      ReactDOM.render(
+        <Greeting className="my-class">
+          <h1>Warm Welcome!</h1>               // h1 nested element.
+        </Greeting>, appRoot);
+```
+```
+  ==========CONSOLE==========
+
+  {className: "my-class", children: {…}}
+    className: "my-class"
+    children: {$$typeof: Symbol(react.element), type: "h1", key: null, ref: null, props: {…}, …}
+    __proto__: Object
+```
+</dd>
+</dl>
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+
 # How do you create and use a custom component?
 To create and use basic components in your application, you simply need to follow the following process:
 
