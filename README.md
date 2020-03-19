@@ -8,7 +8,14 @@ The React component Study is an examination of Components, functionality, and be
 Here are a few questions from the study to explore:
 
 * [What is a component?](#What-is-a-component)
+* [What is a prop?](#What-is-a-prop)
 * [Why do you use components?](#Why-do-you-use-components)
+* [](#)
+* [](#)
+
+
+
+
 * [How do you create and use components?](#How-do-you-create-and-use-components)
 * [How do you style components?](#How-do-you-style-components)
 * [](#)
@@ -67,19 +74,6 @@ When you write the component as a function, you simply return the component insi
   ReactDOM.render(React.createElement(Greeting), appRoot);
 
 ```
-
-</dd>
-</dl>
-
-<br>
-<br>
-<br>
-
-# Why do you use components?
-The advantage of using React components is that the are *reusable*. You can make a special component like a button, box, etc. and reuse them as many times as you want throughout your code. They serve the same purpose as JavaScript functions but work in isolation and return HTML via a render function.
-
-<dl>
-<dd>
 
 </dd>
 </dl>
@@ -188,9 +182,6 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 
  In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
 
-<dl>
-<dd>
-
 <br>
 
 ### WITHOUT nested elements, React will not provide the "children" object.
@@ -250,18 +241,32 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 </dd>
 </dl>
 
-</dd>
-</dl>
+<br>
+<br>
+<br>
+
+# Why do you use components?
+The advantage of using React components is that the are *reusable*. You can make a special component like a button, box, etc. and reuse them as many times as you want throughout your code. They serve the same purpose as JavaScript functions but work in isolation and return HTML via a render function.
 
 <br>
 <br>
 <br>
 
+# How do you create and use a custom component?
 
+<dl>
+<dd>
 
+## Create a composition file to store custom components.
+Assuming you have your React application setup and ready to go (e.g. create-react-app), the first thing you need to do is create "composition" file inside your source files folder. This file is going to house all of the components for the immediate study.
+```
+  src  >  composition  
+```
 
+<br>
 
-
+## Create a custom component file
+Now that you have a composition file, you can create as many custom compents as you want and store them (and associaetd css files) for use in your application. The setup for a custom component is usually 
 
 
 
@@ -286,10 +291,18 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 
 /////////////////////////////////////////////////////////
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # How do you create and use a custom component?
-To create and use basic components in your application, you simply need to follow the following process:
 
 <dl>
 <dd>
