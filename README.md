@@ -25,6 +25,7 @@ Here are a few questions from the study to explore:
 <br>
 <br>
 <br>
+<br>
 
 # What is a component?
 
@@ -78,6 +79,7 @@ When you write the component as a function, you simply return the component insi
 </dd>
 </dl>
 
+<br>
 <br>
 <br>
 <br>
@@ -244,10 +246,12 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 <br>
 <br>
 <br>
+<br>
 
 # Why do you use components?
 The advantage of using React components is that the are *reusable*. You can make a special component like a button, box, etc. and reuse them as many times as you want throughout your code. They serve the same purpose as JavaScript functions but work in isolation and return HTML via a render function.
 
+<br>
 <br>
 <br>
 <br>
@@ -298,15 +302,19 @@ And lastly, you need to export your component for use elsewhere in the applicati
 
 ```JavaScript
   import React from 'react';
+  import MyComponent from './composition/MyComponent';      // Import your custom component from file location.                  
 
   function App() {
     return (
-
+      <MyComponent>                                         // Use the imported custom component.
+        This is a test.                                     // The text in this case is accessible via props.children.
+      </MyComponent>      
     );
   }
 
   export default App;
 ```
+
 
 
 
