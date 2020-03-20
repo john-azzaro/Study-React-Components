@@ -298,22 +298,65 @@ And lastly, you need to export your component for use elsewhere in the applicati
 <br>
 
 ## Import and use you custom component.
-**To import a custom component, you need to import the file and then use the component name you exported.**
+**To import a custom component, you need to import the file and then use the component name you exported.** First, you need to import the component by name and then import it from the file location. Once this is done, you can use the component anywhere in the file! In the example below, we use the ```MyComponent``` component in the App component and the result of that JSX return will be "This is a test" passed via the props object to the div element in the MyComponent component.
 
 ```JavaScript
   import React from 'react';
-  import MyComponent from './composition/MyComponent';      // Import your custom component from file location.                  
+  import MyComponent from './composition/MyComponent';      // Import custom component from file location.                  
 
   function App() {
     return (
       <MyComponent>                                         // Use the imported custom component.
-        This is a test.                                     // The text in this case is accessible via props.children.
+        This is a test.                                     // Text accessible via props.children.
       </MyComponent>      
     );
   }
 
   export default App;
 ```
+
+<br>
+<br>
+<br>
+<br>
+
+# How do you make components configurable?
+
+<dl>
+<dd>
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+<br>
+
+# How do you style components?
+
+<dl>
+<dd>
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -591,12 +634,6 @@ Inside the split component you add code to read the props and create a new combi
   }
 ```
 
-</dd>
-</dl>
-
-<br>
-<br>
-<br>
 
 
 
@@ -610,4 +647,8 @@ Inside the split component you add code to read the props and create a new combi
 <br>
 <br>
 <br>
+<br>
+
+
+
 
