@@ -10,17 +10,13 @@ Here are a few questions from the study to explore:
 * [What is a component?](#What-is-a-component)
 * [What is a prop?](#What-is-a-prop)
 * [Why do you use components?](#Why-do-you-use-components)
-* [](#)
-* [](#)
-
-
-
-
-* [How do you create and use components?](#How-do-you-create-and-use-components)
+* [How do you create and use a custom component?](#How-do-you-create-and-use-a-custom-component)
 * [How do you style components?](#How-do-you-style-components)
+* [How do you make components configurable?](#How-do-you-make-components-configurable)
 * [](#)
 * [](#)
 * [](#)
+
 
 <br>
 <br>
@@ -338,6 +334,78 @@ And lastly, you need to export your component for use elsewhere in the applicati
 <br>
 <br>
 
+
+# How do you style components?
+
+<dl>
+<dd>
+
+## Create a CSS file inside the same folder as your component file.
+For component styling, create a style sheet with the name of the component (or related components) in the folder you have the component in. 
+For example, if you are making a CSS file for a custom component, it will be inside the composition file. 
+```
+  composition  >  MyComponent.css
+```
+
+## Import the CSS file to your component file
+To import a css file, all you need to do is import the file directly using the "import" keyword and the file path.
+```JavaScript
+    import React from 'react';
+    import './MyComponent.css';                      // import css file to component file.
+    
+    function Greeting(props) {       
+    return (                             
+      <div>
+        {props.children}           
+      </div>
+    );
+  }
+
+  export default Greeting;
+```
+
+## You can also use inline styling.
+To Use inline styling, you simply need to add the additional attribute to your element. Normally you would want to use className, 
+but in this case, you just add the attribute with double brackets, one for the JSX insertion and the second for the css property. 
+```JavaScript
+    import React from 'react';
+    import './MyComponent.css';    
+    
+    function Greeting(props) {       
+      return (                             
+        <div style={{ color: props.color }}>            // 1. inline style option
+          {props.children}           
+        </div>
+      );
+    }
+
+  export default Greeting;
+```
+
+And then to add the inline styling to the component in App, simply add the "color" attribute to the special variables you 
+created in the primary App component. In this case, we can add the color name or a hexcode (i.e. color='#126BCC').
+```JavaScript
+    const MyGreetings = (
+      <Greeting color='#126BCC'>                       // 2. added color attribute.
+        Hello there friend!         
+      </Greeting>  
+    );
+    
+    function App() {
+    return (
+       {MyGreetings}         
+    );
+  }
+```
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+<br>
+
 # How do you make components configurable?
 
 <dl>
@@ -412,79 +480,7 @@ need to use a template literal and access the props.className prop.
 <br>
 <br>
 
-# How do you style components?
 
-<dl>
-<dd>
-
-## Create a CSS file inside the same folder as your component file.
-For component styling, create a style sheet with the name of the component (or related components) in the folder you have the component in. 
-For example, if you are making a CSS file for a custom component, it will be inside the composition file. 
-```
-  composition  >  MyComponent.css
-```
-
-## Import the CSS file to your component file
-To import a css file, all you need to do is import the file directly using the "import" keyword and the file path.
-```JavaScript
-    import React from 'react';
-    import './MyComponent.css';                      // import css file to component file.
-    
-    function Greeting(props) {       
-    return (                             
-      <div>
-        {props.children}           
-      </div>
-    );
-  }
-
-  export default Greeting;
-```
-
-## You can also use inline styling.
-To Use inline styling, you simply need to add the additional attribute to your element. Normally you would want to use className, 
-but in this case, you just add the attribute with double brackets, one for the JSX insertion and the second for the css property. 
-```JavaScript
-    import React from 'react';
-    import './MyComponent.css';    
-    
-    function Greeting(props) {       
-      return (                             
-        <div style={{ color: props.color }}>            // 1. inline style option
-          {props.children}           
-        </div>
-      );
-    }
-
-  export default Greeting;
-```
-
-And then to add the inline styling to the component in App, simply add the "color" attribute to the special variables you 
-created in the primary App component. In this case, we can add the color name or a hexcode (i.e. color='#126BCC').
-```JavaScript
-    const MyGreetings = (
-      <Greeting color='#126BCC'>                       // 2. added color attribute.
-        Hello there friend!         
-      </Greeting>  
-    );
-    
-    function App() {
-    return (
-       {MyGreetings}         
-    );
-  }
-```
-
-
-
-
-</dd>
-</dl>
-
-<br>
-<br>
-<br>
-<br>
 
 
 
