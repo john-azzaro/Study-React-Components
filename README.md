@@ -342,8 +342,29 @@ To put configurability in context, if you use a component like "MyComponent" in 
   }
 ```
 
-## 
-To create a component that can be used many times over, you need to make the component configurable. What this means is that we want to use a component for multiple uses, such as other greetings like "Howdy" or "Hiya" without making 2 seperate components that say those exact things. To make the component configurable, you need to use the props object. This will in turn allow children to pass via the props object to the 
+## Configure components with props.
+To create a component that can be used many times over, you need to make the component configurable. You can do this using the "props" object, which is passed to the relevant component and allows you to access any of the properties that it stores. This is useful because it allows your component to be used in many different ways. 
+
+Consider the Greeting component above. The component as it is has one use... to say "Hello there friend!" with the associated stylings. However, if you want to use the same component with different greetings like "Howdy" or "Hiya", you would have to make completely different components for those seperate greetings. 
+
+To make the component configurable, you need to use the props object. This will in turn allow children (i.e. the text "Hello there friend!") to pass via the props object to the Greeting component and back to the App component for display.  To configure the component, you simply need to pass props as a parameter of the Greeting component and then access the child "Hello there friend!" text via ```props.children```.
+```JavaScript
+  function Greeting(props) {                // 2. Pass the "props" object to access the child text.   
+    return (                             
+      <div className="greetingStyle">
+        {props.children}                    // 3. And access the children via props.children.
+      </div>
+    );
+  }
+    
+  function App() {
+    return (
+      <Greeting>                            // 1. Greeting component with children text.
+        Hello there friend!              
+      </Greeting>            
+    );
+  }
+```
 
 
 
