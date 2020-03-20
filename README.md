@@ -300,7 +300,7 @@ And lastly, you need to export your component for use elsewhere in the applicati
 
 ```JavaScript
   import React from 'react';
-  import MyComponent from './composition/MyComponent';      // Import custom component from file location.                  
+  import MyComponent from './composition/MyComponent';      // Import custom component from file location. 
 
   function App() {
     return (
@@ -312,6 +312,33 @@ And lastly, you need to export your component for use elsewhere in the applicati
 
   export default App;
 ```
+
+**You can also store the component as a constant and then use it in another component.** For example, instead of cramming all the code associated with the component inside another component, you can make things cleaner by storing the component *outside* another function and then using that variable name anywhere you want.
+```JavaScript
+  import React from 'react';
+  import MyComponent from './composition/MyComponent';    
+
+  const UseComponent = (                     // Component stored as a const...
+    <MyComponent>                             
+      This is a test.            
+    </MyComponent>    
+  );
+
+  function App() {
+    return (
+      {UseComponent}                         // ... and used in App.
+    );
+  }
+
+  export default App;
+```
+
+
+
+
+
+
+
 
 <br>
 <br>
@@ -337,22 +364,22 @@ To put configurability in context, if you use a component like "MyComponent" in 
     
   function App() {
     return (
-      <Greeting />                            // 3. Greeting component with "Hello there friend!" text.  
+      <Greeting />                            // 3. Greeting "Hello there friend!" text.  
     );
   }
 ```
 
 ## Configure components with props.
-To create a component that can be used many times over, you need to make the component configurable. You can do this using the "props" object, which is passed to the relevant component and allows you to access any of the properties that it stores. This is useful because it allows your component to be used in many different ways. 
+**To create a component that can be used many times over, you need to make the component configurable.** You can do this using the "props" object, which is passed to the relevant component and allows you to access any of the properties that it stores. This is useful because it allows your component to be used in many different ways. 
 
 Consider the Greeting component above. The component as it is has one use... to say "Hello there friend!" with the associated stylings. However, if you want to use the same component with different greetings like "Howdy" or "Hiya", you would have to make completely different components for those seperate greetings. 
 
-To make the component configurable, you need to use the props object. This will in turn allow children (i.e. the text "Hello there friend!") to pass via the props object to the Greeting component and back to the App component for display.  To configure the component, you simply need to pass props as a parameter of the Greeting component and then access the child "Hello there friend!" text via ```props.children```.
+**To make the component configurable, you need to use the props object.** This will in turn allow children (i.e. the text "Hello there friend!") to pass via the props object to the Greeting component and back to the App component for display.  To configure the component, you simply need to pass props as a parameter of the Greeting component and then access the child "Hello there friend!" text via ```props.children```.
 ```JavaScript
-  function Greeting(props) {                // 2. Pass the "props" object to access the child text.   
+  function Greeting(props) {                // 2. Pass the "props" object to access the child text.
     return (                             
       <div className="greetingStyle">
-        {props.children}                    // 3. And access the children via props.children.
+        {props.children}                    // 3. ... and pass child text through via props.children.
       </div>
     );
   }
@@ -360,61 +387,14 @@ To make the component configurable, you need to use the props object. This will 
   function App() {
     return (
       <Greeting>                            // 1. Greeting component with children text.
-        Hello there friend!              
+        Hello there friend!                 // 4. "Hello there friend!" will return via JSX.
       </Greeting>            
     );
   }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```JavaScript 
-  function Greeting() {
-    return (
-      <div className="greetStyle">
-        
-      </div>
-    );
-  }
-  
-  
-  function App() {
-    return (
-      <Greeting>                         // Greeting component with "Hello there friend!" text.
-        Hello there friend!
-      </Greeting>
-    );
-  }
-```
-
-
-
-
-
-
-
-you use the ```props``` object 
-
-
-
-here it means that in the App.js file, we want to use 
-  the component but also use the text in App.js as well. We do this by using the props 
-  object. What this means is that when we use the component, the children of that prop 
-  (i.e. the text) are passed to the component (via the "props" parameter) so that they
-  can be used in the specific context.
-
+## You can also configure components with variables.
+Variables can store such things as attributes (e.g. className, etc.)
 
 
 
