@@ -415,12 +415,12 @@ For example, if you are making a CSS file for a custom component, it will be ins
 To import a css file, all you need to do is import the file directly using the "import" keyword and the file path.
 ```JavaScript
     import React from 'react';
-    import './MyComponent.css';
+    import './MyComponent.css';                      // import css file to component file.
     
-    function Greeting(props) {                // 2. Pass the "props" object to access the child text.
+    function Greeting(props) {       
     return (                             
-      <div className="greetingStyle">
-        {props.children}                    // 3. ... and pass child text through via props.children.
+      <div>
+        {props.children}           
       </div>
     );
   }
@@ -428,6 +428,39 @@ To import a css file, all you need to do is import the file directly using the "
   export default Greeting;
 ```
 
+## You can also use inline styling.
+To Use inline styling, you simply need to add the additional attribute to your element. Normally you would want to use className, 
+but in this case, you just add the attribute with double brackets, one for the JSX insertion and the second for the css property. 
+```JavaScript
+    import React from 'react';
+    import './MyComponent.css';    
+    
+    function Greeting(props) {       
+      return (                             
+        <div style={{ color: props.color }}>            // 1. inline style option
+          {props.children}           
+        </div>
+      );
+    }
+
+  export default Greeting;
+```
+
+And then to add the inline styling to the component in App, simply add the "color" attribute to the special variables you 
+created in the primary App component. In this case, we can add the color name or a hexcode (i.e. color='#126BCC').
+```JavaScript
+    const MyGreetings = (
+      <Greeting color='#126BCC'>                       // 2. added color attribute.
+        Hello there friend!         
+      </Greeting>  
+    );
+    
+    function App() {
+    return (
+       {MyGreetings}         
+    );
+  }
+```
 
 
 
