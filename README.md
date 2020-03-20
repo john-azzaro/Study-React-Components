@@ -387,7 +387,20 @@ Consider the Greeting component above. The component as it is has one use... to 
 ```
 
 ## You can also configure components with variables.
-Variables can store such things as attributes (e.g. className, etc.)
+Variables can store such things as attributes (e.g. className, etc.). To make these attributes configurable, you need to create a variable can apply the
+attrubutes like stylizations that already exist for your component but also the additional attibutes that exist outside this component. To do this, you 
+need to use a template literal and access the props.className prop.
+```JavaScript
+  function Greeting(props) {       
+    const combinedClassName = `greetingStyle ${props.className}`;        // 1. access className prop.
+    return (                             
+      <div className={combinedClassName}>                                // 2. use as className value.
+        {props.children}                
+      </div>
+    );
+  }
+
+```
 
 
 
