@@ -280,17 +280,17 @@ The advantage of using React components is that the are *reusable*. You can make
 
 And lastly, you need to export your component for use elsewhere in the application.
 ```JavaScript
-  import React from 'react';                // Import react
+  import React from 'react';                         // 1. Import react
 
-  function MyComponent(props) {             // Custom component (with props passed in).
+  function MyComponent(props) {                      // 2. Custom component (with props passed in).
     return (
       <div>
-        {props.children}                    // and access the children via props.children.
+        {props.children}                             // 3. Access the children via props.children.
       </div>
     );
   }
 
-  export default MyComponent;               // Export "MyComponent" component.
+  export default MyComponent;                        // 4. Export "MyComponent" component.
 ```
 
 <br>
@@ -300,12 +300,12 @@ And lastly, you need to export your component for use elsewhere in the applicati
 
 ```JavaScript
   import React from 'react';
-  import MyComponent from './composition/MyComponent';      // Import custom component from file location. 
+  import MyComponent from './composition/MyComponent';      // 1. Import custom component from file location. 
 
   function App() {
     return (
-      <MyComponent>                                         // Use the imported custom component.
-        This is a test.                                     // Text accessible via props.children.
+      <MyComponent>                                         // 2. Use the imported custom component.
+        This is a test.                                     // 3. Text accessible via props.children.
       </MyComponent>      
     );
   }
@@ -313,12 +313,12 @@ And lastly, you need to export your component for use elsewhere in the applicati
   export default App;
 ```
 
-**You can also store the component as a constant and then use it in another component.** For example, instead of cramming all the code associated with the component inside another component, you can make things cleaner by storing the component *outside* another function and then using that variable name anywhere you want.
+**You can also store the component as a constant and then use it in another component.** For example, instead of cramming all the code associated with the component inside another component, you can make things cleaner by storing the component *outside* another function and then using that variable name anywhere you want inside the curly braces.
 ```JavaScript
   import React from 'react';
   import MyComponent from './composition/MyComponent';    
 
-  const UseComponent = (                     // Component stored as a const...
+  const UseComponent = (                                     // 1. Component stored as a const...
     <MyComponent>                             
       This is a test.            
     </MyComponent>    
@@ -326,19 +326,12 @@ And lastly, you need to export your component for use elsewhere in the applicati
 
   function App() {
     return (
-      {UseComponent}                         // ... and used in App.
+      {UseComponent}                                         // 2. Stored component used in code.
     );
   }
 
   export default App;
 ```
-
-
-
-
-
-
-
 
 <br>
 <br>
@@ -411,7 +404,29 @@ Variables can store such things as attributes (e.g. className, etc.)
 <dl>
 <dd>
 
+## Create a CSS file inside the same folder as your component file.
+For component styling, create a style sheet with the name of the component (or related components) in the folder you have the component in. 
+For example, if you are making a CSS file for a custom component, it will be inside the composition file. 
+```
+  composition  >  MyComponent.css
+```
 
+## Import the CSS file to your component file
+To import a css file, all you need to do is import the file directly using the "import" keyword and the file path.
+```JavaScript
+    import React from 'react';
+    import './MyComponent.css';
+    
+    function Greeting(props) {                // 2. Pass the "props" object to access the child text.
+    return (                             
+      <div className="greetingStyle">
+        {props.children}                    // 3. ... and pass child text through via props.children.
+      </div>
+    );
+  }
+
+  export default Greeting;
+```
 
 
 
