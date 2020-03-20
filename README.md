@@ -180,8 +180,6 @@ And because you pass the props like arguments, you pass ```props``` as a paramet
 ## Nesting Elements will create a prop called "children".
 **When you nest other elements inside your rendered component, React will create a special object called "children".** For example, if you want to nest an ```<h1>``` element inside ```<header>```, those nested elements are stored and accessed via the "children" property. The children prop to pass nested element much like an argument to a function which React then renders to the page.
 
-
-
  In the following examples, you'll see how the rendered component shows in the console WITHOUT children and WITH children and how when you do have children, a special "children" property is created.
 
 <br>
@@ -325,8 +323,76 @@ And lastly, you need to export your component for use elsewhere in the applicati
 <dl>
 <dd>
 
+## Without configurability, components lack multiple uses. 
+
+To put configurability in context, if you use a component like "MyComponent" in another like "App" in App.js, you will most likely need to access content inside the invoked component. To start off, take a look at a basic use of a component in the ```App``` component. Although this is a great example of how to use a component, you'll notice that this component only has one use.
+```JavaScript 
+  function Greeting() {                        // 1. "Greeting" custom component.
+    return (                                   // 2. That returns the following JSX element.
+      <div className="greetingStyle">
+        Hello there friend!               
+      </div>
+    );
+  }
+    
+  function App() {
+    return (
+      <Greeting />                            // 3. Greeting component with "Hello there friend!" text.  
+    );
+  }
+```
+
+## 
+To create a component that can be used many times over, you need to make the component configurable. What this means is that we want to use a component for multiple uses, such as other greetings like "Howdy" or "Hiya" without making 2 seperate components that say those exact things. To make the component configurable, you need to use the props object. This will in turn allow children to pass via the props object to the 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+```JavaScript 
+  function Greeting() {
+    return (
+      <div className="greetStyle">
+        
+      </div>
+    );
+  }
+  
+  
+  function App() {
+    return (
+      <Greeting>                         // Greeting component with "Hello there friend!" text.
+        Hello there friend!
+      </Greeting>
+    );
+  }
+```
+
+
+
+
+
+
+
+you use the ```props``` object 
+
+
+
+here it means that in the App.js file, we want to use 
+  the component but also use the text in App.js as well. We do this by using the props 
+  object. What this means is that when we use the component, the children of that prop 
+  (i.e. the text) are passed to the component (via the "props" parameter) so that they
+  can be used in the specific context.
 
 
 
