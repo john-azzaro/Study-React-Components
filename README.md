@@ -543,7 +543,8 @@ To illustrate how similar class and functional components are, here are two comp
 <dl>
 <dd>
 
-
+## Default props are used if no default value is supplied.
+Default props will render with the property "static defaultProps". They assign an object to that exact property. The keys of that object are the props you want to have defaults for and the values are the default values you want to assign. To use a default prop, you need to add it the same way you would a variable inside your class component but as ```static defaultProp``` as an object with the properties you want to establish as standard.
 
 
 
