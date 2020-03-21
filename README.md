@@ -509,20 +509,20 @@ React class components need a special method called "render". This is the only m
 ## Class components and Functional components are very similar.
 To illustrate how similar class and functional components are, here are two components that do the exact same thing but using either the class or functional format.
 ```JavaScript
-  class MyClassComponent extends React.component {
-    render() {
-      return (
+  class MyClassComponent extends React.component {       // class component...
+    render() {                                           // ... that renders JSX (i.e. return)...
+      return (                                           // ... and returns JSX.
         <div>
-          {this.props.children}
+          {this.props.children}                          // Props are accessed via this.props.
         <div>
       );
     }
   }
 ```
 ```JavaScript
-  function MyClassComponent(props) {
+  function MyClassComponent(props) {                      // functional component with props passed in.
     return (
-      {props.children}
+      {props.children}                                    // ... and accessed via props.children.
     );
   }
 
