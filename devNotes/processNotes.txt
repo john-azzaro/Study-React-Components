@@ -375,3 +375,4 @@ React Developer tools: https://chrome.google.com/webstore/detail/react-developer
 * See the console components tab to see a list of all the components.
 
 https://www.geeksforgeeks.org/reactjs-importing-exporting/    -- good elaboration on importation and exportation.
+https://www.freecodecamp.org/news/how-to-write-your-first-react-js-component-d728d759cabc/   -- class components
