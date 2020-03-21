@@ -486,7 +486,8 @@ need to use a template literal and access the props.className prop.
 ## Classes make React components with extra features.
 Classes are a standard ES6 feature that you can use to make React components with extra features. A component can be of two types; either a function component or a class component. Functional components is the simplest form of a react component. A class component has a lot more features to define a class component. Like a function component, the class component receives props. Additionally, Classes are similar to objects as they contain methods.However, inside a class component the State object can be changed while the Props object represents fixed values.
 
-## Class components 
+## To create a class component, define a class and extend React.component.
+To create a class component, you need to define a class that extends ```React.component```.
 
 
 
