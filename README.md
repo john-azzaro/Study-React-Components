@@ -495,7 +495,10 @@ need to use a template literal and access the props.className prop.
 ```
 
 ## 
-React class components need a special method 
+React class components need a special method called "render". This is the only method required for react class components. The "render" method is similar to the "return" method in a functional component where you "return" JSX to define what the component will look like. The difference between render and return is how the props work for a class component compared to a functional component. In a functional component, props are a parameter. In a class component, the props are NOT parameters. Additionally, props are accessed via the self-referential *this*.
+```JavaScript
+  
+```
 
 
 
