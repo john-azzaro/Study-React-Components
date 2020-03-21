@@ -40,7 +40,7 @@ Here are a few questions from the study to explore:
 <br>
 
 ## A component can be written as a function.
-When you write the component as a function, you simply return the component inside parentheses ( () ). **Note here that custom components should be upper case**
+When you write the component as a function, you simply return the component inside parentheses ( (...) ). **Note here that custom components should be upper case**
 ```JavaScript
       function Greeting() {
         return (
@@ -470,8 +470,6 @@ need to use a template literal and access the props.className prop.
 
 ```
 
-
-
 </dd>
 </dl>
 
@@ -480,6 +478,20 @@ need to use a template literal and access the props.className prop.
 <br>
 <br>
 
+# What are React Class components?
+
+<dl>
+<dd>
+
+## Classes make React components with extra features.
+
+
+
+
+
+
+</dd>
+</dl>
 
 
 
