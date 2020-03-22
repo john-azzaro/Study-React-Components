@@ -645,9 +645,36 @@ And if you were to see the entire tree, with the parent component "App" and the 
 <dl>
 <dd>
 
+## Dynamic lists in React are essential.
+Knowing how to build lists of components is essential for React applications. By lists, we mean lists of friends, emails, restaurants, songs, documents, etc. Lists need to be dynamic. Why? Because with many applications that use lists, as a developer you dont know about the exact list the app will display at any given moment. You wont know the content of the individual items or how many items will be displayed at any time. JSX and React have many features for displaying lists.
 
+## Arrays can be rendered in JSX.
+It is important to note that we can render arrays with JSX by wrapping the array in curly braces. This makes the the items inside the array JSX elements themselves.
+```JavaScript
+        const someJsx = (
+          <ul>
+            {[                                 // array wrapped in brackets.
+              <li />;
+              <li />;
+              <li />;
+            ]}
+          </ul>
+        );
+```
 
-
+## Use the key prop to track items in an array.
+To track items in an array you need to use the "key" prop for each item in the array. You can also use id attributes or simple numbers for keys.
+```JavaScript
+          const someJsx = (
+          <ul>
+            {[                              
+              <li key="first" />;          // key props
+              <li key="second" />;
+              <li key={ 3 } />;            // simple number
+            ]}
+          </ul>
+        );
+```
 
 
 
