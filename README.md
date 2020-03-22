@@ -544,23 +544,21 @@ To illustrate how similar class and functional components are, here are two comp
 <dd>
 
 ## Default props are used if no default value is supplied.
-Default props will render with the property "static defaultProps". In essence, all you need to do is create a ```static defaultProps``` variable before you render your JSX. Inside this variable you have an object with all the properties you want to to be standard. Then, when you want to assign those default props inside your rendered code, you insert an object inside the brackets you would normally use with JSX (i.e. {{ myProperty: 'my value'  }}).
+Default props will render with the property "static defaultProps". In essence, all you need to do is create a ```static defaultProps``` variable before you render your JSX. Inside this variable you have an object with all the properties you want to to be standard. Then, when you want to assign those default props inside your rendered code, you insert an object inside the brackets you would normally use with JSX (i.e. {{ color: 'red'  }}).
 ```JavaScript
   class MyClassComponent extends React.component {
-    static defaultProps = {
-      color: 'red';
+    static defaultProps = {                                  // 1. Default prop variable
+      color: 'red';                                          // 2. Properties that can be assigned below.
     }  
     render() {
       return (
-        <div>
+        <div style={{ color: this.props.color }}>            // 3. And used in the component elements.
           {this.props.children}   
         <div>
       );
     }
   }
 ```
-
-
 
 </dd>
 </dl>
@@ -570,6 +568,9 @@ Default props will render with the property "static defaultProps". In essence, a
 <br>
 <br>
 
+# What is composition?
+
+<dl>
 
 
 
