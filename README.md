@@ -571,8 +571,22 @@ Default props will render with the property "static defaultProps". In essence, a
 # What is composition?
 
 <dl>
+<dd>
+
+## Composition is about arranging components.
+**Composition is the approach of arranging components within or next to each other.** Using composition, multiple components can be combined into one new component. Components are like branches on a tree where each branch contains zero or more branches branching off from it, so one component can have
+  0 or more components branching from it. The component branches be considered "sub-trees" which would be a new component with its own internal tree of branches.
 
 
+
+
+</dd>
+</dl>
+
+<br>
+<br>
+<br>
+<br>
 
 
 
