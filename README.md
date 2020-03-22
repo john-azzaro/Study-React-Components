@@ -15,6 +15,8 @@ Here are a few questions from the study to explore:
 * [How do you make components configurable?](#How-do-you-make-components-configurable)
 * [How do you create React class components?](#How-do-you-create-React-class-components)
 * [What are default props and how do you use them?](#What-are-default-props-and-how-do-you-use-them)
+* [What is composition?](#What-is-composition)
+* [](#)
 * [](#)
 * [](#)
 * [](#)
@@ -630,7 +632,18 @@ And if you were to see the entire tree, with the parent component "App" and the 
                 App                          // Parent component.
 ```
 
+</dd>
+</dl>
 
+<br>
+<br>
+<br>
+<br>
+
+# What are component lists?
+
+<dl>
+<dd>
 
 
 
