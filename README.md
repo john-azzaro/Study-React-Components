@@ -574,11 +574,13 @@ Default props will render with the property "static defaultProps". In essence, a
 <dd>
 
 ## Composition is about arranging components.
-**Composition is the approach of arranging components within or next to each other.** Using composition, multiple components can be combined into one new component. Components are like branches on a tree where each branch contains zero or more branches branching off from it, so one component can have
-  0 or more components branching from it. The component branches be considered "sub-trees" which would be a new component with its own internal tree of branches.
+**Composition is the approach of arranging components within or next to each other.** Using composition, multiple components can be combined into one new component. Components are like branches on a tree where each branch contains zero or more branches branching off from it, so one component can have 0 or more components branching from it. The component branches be considered "sub-trees" which would be a new component with its own internal tree of branches.
 
+## You need composition to arrange smaller components.
+When you compose elements, you are possuting components inside or next to each other. When you arrange components in different configurations, you can achieve different results. But the main reason for composition is to that by composition components, you can manage your app via smaller reusable pieces... which you can then use and reuse as a child of many other components.
 
-
+## Components have relationships.
+When components render other components, you create a relationship between components. The rendering component is called the "parent". The component rendered inside the component is called the "child". Components next to the component are called "siblings". Remember in this case that a child component here is different than the children prop. Props are actual values in the code while the parent-child relationship is an informal way of describing the relationship. Parent components can have multiple child components and child components can be parent components themselves.
 
 </dd>
 </dl>
