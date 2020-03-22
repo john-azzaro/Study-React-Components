@@ -582,6 +582,62 @@ When you compose elements, you are possuting components inside or next to each o
 ## Components have relationships.
 When components render other components, you create a relationship between components. The rendering component is called the "parent". The component rendered inside the component is called the "child". Components next to the component are called "siblings". Remember in this case that a child component here is different than the children prop. Props are actual values in the code while the parent-child relationship is an informal way of describing the relationship. Parent components can have multiple child components and child components can be parent components themselves.
 
+Take for example this App component:
+```JavaScript
+      function App() {
+        return (
+          <div>
+            <h1 />
+            <p />
+            <CustomComponent />
+          </div>
+        )
+      }
+```
+
+The "tree" of the App component above would look like this:
+```
+         h1      p    CustomComponent     
+          |______|______|
+                 |
+                div
+                 |
+                App
+```
+
+The ```CustomComponent``` would likewise have its own tree:
+```
+        li             li
+         |_____________|
+                |
+                ul
+                |
+          CustomComponent
+```
+
+And if you were to see the entire tree, with the parent component "App" and the child component "CustomComponent", it would look like this:
+```
+                 li             li
+                  |_____________|
+                        |
+                        ul
+                        |      
+         h1      p    CustomComponent        // Child component.
+          |______|______|
+                 |
+                div
+                 |
+                App                          // Parent component.
+```
+
+
+
+
+
+
+
+
+
 </dd>
 </dl>
 
