@@ -676,6 +676,31 @@ To track items in an array you need to use the "key" prop for each item in the a
         );
 ```
 
+## Generate items from an array with the map method.
+Code is not often done like it is above but instead we would take an array from an API repsonse and generate elements from that array. To generate items from an array, you would need to map the items and then return the array of items as JSX. For example, if you were given a JSON response object with a list of items, you would display those items like so:
+```
+      {
+        "items": [
+          { "id": "abc123", "name": "Table" },
+          { "id": "def456", "name": "Chair" },
+          { "id": "ghi789", "name": "Lamp" },
+          { "id": "jkl012", "name": "Sofa" }
+        ]
+      }
+```
+```
+      const arrayOfItems = apiResponse.items.map(function(item) {         // variable that takes the apiResponse, looks at the items property (whose value is an array) and maps for each item...
+        <li key="item.id">                                                // ... for each item.id (i.e. abc123, etc.)...
+          {item.name}                                                     // ... show the item name.
+        </li>
+      });
+      return (                                                           // and return as JSX...
+        <ul>                                                             // ... inside a ul...
+          {arrayOfItems}                                                 // ... the item name.
+        </ul<
+      )
+```
+
 
 
 </dd>
