@@ -498,7 +498,7 @@ need to use a template literal and access the props.className prop.
   }
 ```
 
-## Class components use the render method.
+## Class components MUST use the render method.
 React class components need a special method called "render". This is the only method required for react class components. The "render" method is similar to the "return" method in a functional component where you "return" JSX to define what the component will look like. The difference between render and return is how the props work for a class component compared to a functional component. In a functional component, props are a parameter. In a class component, the props are NOT parameters. Additionally, props are accessed via the self-referential *this*.
 ```JavaScript
   class MyClassComponent extends React.component {
@@ -545,7 +545,7 @@ To illustrate how similar class and functional components are, here are two comp
 <dl>
 <dd>
 
-## Default props are used if no default value is supplied.
+## Use default props to avoid errors with props inside components.
 Default props will render with the property "static defaultProps". In essence, all you need to do is create a ```static defaultProps``` variable before you render your JSX. Inside this variable you have an object with all the properties you want to to be standard. Then, when you want to assign those default props inside your rendered code, you insert an object inside the brackets you would normally use with JSX (i.e. {{ color: 'red'  }}).
 ```JavaScript
   class MyClassComponent extends React.component {
